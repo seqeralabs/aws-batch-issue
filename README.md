@@ -1,4 +1,16 @@
-# This repo replicate the issue on creating a AWS Batch compute environment 
+# This repo replicates the issue on creating a AWS Batch compute environment 
+
+### The problem 
+
+The Batch compute environment creation using the code at [this link](app/src/main/java/com/acme/App.java) fails with the message:
+
+```
+You are not authorized to perform this operation
+```
+
+The user has the required permission. See [here](https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json#L23). Also the code was passing integration tests for months. 
+
+### Configuration
 
 The user account has the IAM policy at [this link](https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json).
 
